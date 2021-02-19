@@ -1,4 +1,5 @@
 import React from "react";
+import { deleteFavorite } from "../../redux/actions/FavoritesActions";
 //key, name, image, symbol, markeCap, price, priceChange, volume
 
 const Display = ({
@@ -20,8 +21,12 @@ const Display = ({
       <article>{priceChange}</article>
       <article>{marketCap}</article>
       <article>{volume}</article>
-      {/* {!isFavorite && <button>Add Favorite</button>}
-      {isFavorite && <button> Remove Favorite</button>} */}
+      {!isFavorite && (
+        <button onClick={() => addFavorite(coin)}>Add Favorite</button>
+      )}
+      {isFavorite && (
+        <button onClick={() => deleteFavorite(coin.id)}>Remove Favorite</button>
+      )}
     </div>
   );
 };

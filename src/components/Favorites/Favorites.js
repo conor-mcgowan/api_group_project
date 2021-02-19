@@ -1,7 +1,7 @@
 import React from "react";
 import Display from "../Display/Display";
-import { connect } from "react-redux";
 import { deleteFavorite } from "../../redux/actions";
+import { connect } from "react-redux";
 
 const Favorites = (props) => {
   return (
@@ -9,14 +9,14 @@ const Favorites = (props) => {
       <h1>FavoritesPage</h1>
       <div>
         <Display
-          key={coin.id}
-          name={coin.name}
-          image={coin.image}
-          symbol={coin.symbol}
-          marketCap={coin.market_cap}
-          price={coin.current_price}
-          priceChange={coin.price_change_percentage_24h}
-          volume={coin.total_volume}
+          name={props.coin.name}
+          key={props.coin.id}
+          image={props.coin.image}
+          symbol={props.coin.symbol}
+          marketCap={props.coin.market_cap}
+          price={props.coin.current_price}
+          priceChange={props.coin.price_change_percentage_24h}
+          volume={props.coin.total_volume}
         />
       </div>
     </>
