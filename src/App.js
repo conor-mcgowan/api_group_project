@@ -1,4 +1,11 @@
-import logo from "./logo.svg";
+import React from "react";
+import {
+  Switch,
+  Route,
+  BrowserRouter as Router,
+  Redirect,
+  NavLink,
+} from "react-router-dom";
 import "./App.css";
 
 function App() {
