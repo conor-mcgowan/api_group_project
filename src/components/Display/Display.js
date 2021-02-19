@@ -20,8 +20,8 @@ const Display = ({
       <article>{priceChange}</article>
       <article>{marketCap}</article>
       <article>{volume}</article>
-      {!isFavorite && <button>Add Favorite</button>}
-      {isFavorite && <button> Remove Favorite</button>}
+      {/* {!isFavorite && <button>Add Favorite</button>}
+      {isFavorite && <button> Remove Favorite</button>} */}
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Display from "../Display/Display";
-import axios from "react";
+import axios from "axios";
 
 const Search = () => {
   const [coins, setCoins] = useState([]);
