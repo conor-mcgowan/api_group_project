@@ -9,3 +9,5 @@ const Favorites = (props) => {
     <div>(Favorites results)</div>
   </>;
 };
+
+export default Favorites;

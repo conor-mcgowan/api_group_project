@@ -8,7 +8,10 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import Search from "./components/Search/Search";
-
+import Favorites from "./components/Favorites/Favorites";
+import LoginPage from "./components/Login/Login";
+import store from "./redux/store";
+import { Provider } from "react-redux";
 
 function App() {
   return (
@@ -43,8 +46,8 @@ function App() {
           <main>
             <Switch>
               <Route exact path="/login" component={LoginPage} />
-              <Route exact path="/search" component={SearchPage} />
-              <Route exact path="/favorites" component={FavoritesPage} />
+              <Route exact path="/search" component={Search} />
+              <Route exact path="/favorites" component={Favorites} />
               <Route path="*">
                 <Redirect to="/search" />
               </Route>
