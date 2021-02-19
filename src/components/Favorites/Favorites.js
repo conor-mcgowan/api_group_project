@@ -4,8 +4,12 @@ import { connect } from "react-redux";
 import { deleteFavorite } from "../../redux/actions";
 
 const Favorites = (props) => {
-  <>
-    <h1>FavoritesPage</h1>
-    <div>(Favorites results)</div>
-  </>;
+  return (
+    <>
+      <h1>FavoritesPage</h1>
+      <div>(Favorites results)</div>
+    </>
+  );
 };
+
+export default Favorites;
