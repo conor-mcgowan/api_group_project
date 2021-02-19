@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const LoginPage = (props) => {
   const history = useHistory();
@@ -47,3 +48,5 @@ const LoginPage = (props) => {
     </>
   );
 };
+
+export default LoginPage;
