@@ -7,9 +7,30 @@ const Favorites = (props) => {
   return (
     <>
       <h1>FavoritesPage</h1>
-      <div>(Favorites results)</div>
+      <div>
+        <Display
+          key={coin.id}
+          name={coin.name}
+          image={coin.image}
+          symbol={coin.symbol}
+          marketCap={coin.market_cap}
+          price={coin.current_price}
+          priceChange={coin.price_change_percentage_24h}
+          volume={coin.total_volume}
+        />
+      </div>
     </>
   );
 };
 
-export default Favorites;
+const mapDispatchToProps = {
+  deleteFavorite,
+};
+
+function mapStateToProps(state) {
+  return {
+    favorites: state.favorites,
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Favorites);
